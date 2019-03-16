@@ -6,13 +6,15 @@
     <title>Unity WebGL Player | To-FuLike</title>
     <link rel="shortcut icon" href="TemplateData/favicon.ico">
     <link rel="stylesheet" href="TemplateData/style.css">
+    <link rel="stylesheet" href="css/game-page.css">
     <script src="TemplateData/UnityProgress.js"></script>  
     <script src="Build/UnityLoader.js"></script>
     <script>
-      var gameInstance = UnityLoader.instantiate("gameContainer", "Build/Web-GL.json", {onProgress: UnityProgress});
+      var gameInstance = UnityLoader.instantiate("gameContainer", "Build/WebGL.json", {onProgress: UnityProgress});
     </script>
   </head>
   <body>
+    <div class="main-box box">
     <div class="webgl-content">
       <div id="gameContainer" style="width: 800px; height: 500px"></div>
       <div class="footer">
@@ -21,5 +23,42 @@
         <div class="title">To-FuLike</div>
       </div>
     </div>
+    </div>
+
+    <div class="side-box box">
+        <h2>概要</h2>
+        <p>
+        「不思議のダンジョンシリーズ」のようなターン制バトルローグライクを目指して製作しました。</br>
+        現段階ではダンジョン自動生成システム、バトルシステム（基本攻撃のみ）を実装しております。</br>
+        今後、アイテム、スキルやトラップなどのゲームには必須の機能をはじめ、UIやエフェクトなども作り込んでいく予定です。</br>
+        </p>
+        <p>
+        ゲーム開発にてキャラの画が出来上がってない状況では、仮のキャラとして直方体の豆腐を動かすことがあるらしい（要出典）。</br>
+        このゲームはそんな豆腐君が主人公です。</br>
+        </p>
+        <h2>操作方法</h2>
+        <ul>
+          <li>W/A/S/Dキー : 移動</li>
+          <li>Lキー : 攻撃</li>
+          <li>Oキー : メニュー表示</li>
+          <li>Kキー : キャンセル</li>
+          <li>Iキー + W/A/S/Dキー : 方向転換</li>
+        </ul>
+        </p>
+        <h2>説明</h2>
+        <p>
+          <ul>
+            <li>豆腐のような直方体がプレイヤーです。襲ってくる動物（敵）を攻撃して倒し、階層を移動していきます。</li>
+            <li>攻撃されたときの出る赤い数字がダメージです。</li>
+            <li>赤いタイルを踏むと次の階に移動できます。</li>
+            <li>階層が進むと敵が強くなります。</li>
+            <li>7階まで到達するとゲームクリアーです。</li>
+            <li>体力がゼロになったらゲームオーバー。</li>
+          </ul>
+        </p>
+        <h2>使用しているAsset</h2>
+        <p><a href="https://assetstore.unity.com/packages/3d/characters/animals/lowpoly-animals-107755">LOWPOLY ANIMALS</a><br/>
+        </p>
+      </div>
   </body>
 </html>
